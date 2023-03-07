@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-function index() {
+function Index() {
   const router = useRouter();
   return (
     <>
@@ -98,7 +98,7 @@ function index() {
                 href="/sign-up"
                 className="inline-block text-sm text-blue-500 hover:text-blue-800"
               >
-                Don't have an account?SignUp
+                Don&apos;t have an account?SignUp
               </Link>
             </div>
           </div>
@@ -108,4 +108,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

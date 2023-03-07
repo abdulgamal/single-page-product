@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-function index() {
+function Index() {
   const router = useRouter();
   return (
     <>
@@ -16,13 +16,13 @@ function index() {
             />
 
             <div className="hidden lg:relative lg:block lg:p-12">
-              <a className="block text-white" href="/">
+              <Link className="block text-white" href="/">
                 <img
                   src="paysoko.png"
                   className="h-6 mr-3 sm:h-9"
                   alt="Paysoko Logo"
                 />
-              </a>
+              </Link>
 
               <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
                 Welcome to SinglePage
@@ -43,7 +43,7 @@ function index() {
           >
             <div className="max-w-xl lg:max-w-3xl">
               <div className="relative -mt-16 block lg:hidden">
-                <a
+                <Link
                   className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
                   href="/"
                 >
@@ -52,7 +52,7 @@ function index() {
                     className="h-6 mr-3 sm:h-9"
                     alt="Paysoko Logo"
                   />
-                </a>
+                </Link>
 
                 <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                   Welcome to SinglePage
@@ -201,4 +201,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
