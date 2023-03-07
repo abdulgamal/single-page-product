@@ -10,18 +10,18 @@ function index() {
         </h1>
 
         <form className="mt-6 mb-0 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
-          <div class="grid gap-6 mb-6 md:grid-cols-2">
+          <div className="grid gap-6 mb-6 md:grid-cols-2">
             <div>
               <label
                 htmlFor="first_name"
-                class="block mb-2 text-sm font-medium text-gray-600"
+                className="block mb-2 text-sm font-medium text-gray-600"
               >
                 Product name
               </label>
               <input
                 type="text"
                 id="first_name"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="Bag"
                 required
               />
@@ -37,7 +37,7 @@ function index() {
                 id="countries"
                 className="bg-gray-50 border border-gray-300 text-gray-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               >
-                <option value="split" selected>
+                <option value="split" defaultValue="split">
                   Split
                 </option>
                 <option value="one-time">One-time</option>
@@ -65,21 +65,21 @@ function index() {
               >
                 Price (KES)
               </label>
-              <div class="flex">
-                <span class="inline-flex items-center px-3 text-sm text-gray-600 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
+              <div className="flex">
+                <span className="inline-flex items-center px-3 text-sm text-gray-600 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
                   $
                 </span>
                 <input
                   type="text"
                   id="price"
-                  class="rounded-none rounded-r-lg bg-gray-50 border text-gray-600 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
+                  className="rounded-none rounded-r-lg bg-gray-50 border text-gray-600 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                   placeholder="20"
                 />
               </div>
             </div>
             <div className="flex items-center justify-center w-full">
               <label
-                for="dropzone-file"
+                htmlFor="dropzone-file"
                 className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
@@ -106,20 +106,20 @@ function index() {
                     SVG, PNG, JPG or GIF (MAX. 800x400px)
                   </p>
                 </div>
-                <input id="dropzone-file" type="file" class="hidden" />
+                <input id="dropzone-file" type="file" className="hidden" />
               </label>
             </div>
             <div>
               <label
                 htmlFor="description"
-                class="block mb-2 text-sm font-medium text-gray-600"
+                className="block mb-2 text-sm font-medium text-gray-600"
               >
                 Product description
               </label>
               <textarea
                 type="text"
                 id="description"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="Product description..."
                 required
               />
@@ -128,7 +128,7 @@ function index() {
 
           <button
             type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             <Link href="/">Submit</Link>
           </button>

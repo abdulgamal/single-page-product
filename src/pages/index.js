@@ -26,7 +26,7 @@ export default function Home() {
                   />
                 </a>
                 <label
-                  for="hbr"
+                  htmlFor="hbr"
                   onClick={() => setToggle(!toggle)}
                   className="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden"
                 >
@@ -72,7 +72,7 @@ export default function Home() {
       <div className="bg-white h-screen relative pt-40 pb-20 lg:pt-44">
         <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
           <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-left xl:text-7xl">
-            Run successful single page <br class="lg:block hidden"></br>
+            Run successful single page <br className="lg:block hidden"></br>
             <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
               eCommerce shops
             </span>
