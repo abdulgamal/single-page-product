@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 function index() {
+  const router = useRouter();
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -10,10 +12,7 @@ function index() {
             Login
           </h1>
 
-          <form
-            action=""
-            className="mt-6 mb-0 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
-          >
+          <div className="mt-6 mb-0 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
             <p className="text-center text-lg font-medium">
               Sign in to your account
             </p>
@@ -88,9 +87,10 @@ function index() {
 
             <button
               type="submit"
+              onClick={() => router.replace("/add-new")}
               className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
             >
-              <Link href="/add-new">Sign in</Link>
+              Sign in
             </button>
 
             <div className="my-2 flex flex-col justify-center items-center">
@@ -101,7 +101,7 @@ function index() {
                 Don't have an account?SignUp
               </Link>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </>
