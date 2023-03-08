@@ -49,9 +49,9 @@ function Home() {
                   The Catcher in the Rye
                 </h1> */}
                 <p className="leading-relaxed">
-                  Reminiscent of Nike's Air Max Plus, the 720 Black Mesh uses a
-                  distinctive pattern on the upper that is a series of different
-                  waves or lines, giving it a rather unique and almost
+                  Reminiscent of Nike&apos;s Air Max Plus, the 720 Black Mesh
+                  uses a distinctive pattern on the upper that is a series of
+                  different waves or lines, giving it a rather unique and almost
                   futuristic appearance. Rather than going for a large Swoosh
                   logo that is typical of many Nike shoes, the Air Max 720 Black
                   Mesh opts for a smaller, understated logo embedded into the
