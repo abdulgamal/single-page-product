@@ -9,13 +9,13 @@ function Navbar() {
         <div className="xl:container m-auto px-6 md:px-12 lg:px-6">
           <div className="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0 lg:py-5">
             <div className="w-full items-center flex justify-between lg:w-auto">
-              <a href="#" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <img
-                  src="paysoko.png"
+                  src="https://paysoko.com/asset/images/logo_1675634395.png"
                   className="h-6 mr-3 sm:h-9"
                   alt="Paysoko Logo"
                 />
-              </a>
+              </Link>
               <label
                 htmlFor="hbr"
                 onClick={() => setToggle(!toggle)}
