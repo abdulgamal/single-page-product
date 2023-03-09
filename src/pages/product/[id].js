@@ -32,7 +32,7 @@ function Home() {
               Product
             </span>
             <h2 className="text-xl font-bold mb-1 text-gray-500 tracking-widest border-b-2 border-gray-200">
-              Naserian's Luxury Farm House
+              Naserian&apos;s Luxury Farm House
             </h2>
             <p className="leading-relaxed">
               Relax and unwind at this peaceful luxurious farm house with
