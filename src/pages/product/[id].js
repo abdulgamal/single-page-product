@@ -1,118 +1,70 @@
+import Carousel from "@/components/Carousel";
 import Navbar from "@/components/Navbar";
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+
+const slides = [
+  "https://images.unsplash.com/photo-1677784502924-01e5a8cbf70c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDF8TThqVmJMYlRSd3N8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1678132446331-da900be50e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI1fE04alZiTGJUUndzfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1678132852119-c03c2e7d2740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fE04alZiTGJUUndzfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1677523875518-14b96c75caca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM5fE04alZiTGJUUndzfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+];
 
 function Home() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col justify-center items-center min-h-screen px-4">
-        <section className="text-gray-600 overflow-hidden shadow-md">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="lg:w-4/5 mx-auto flex flex-wrap">
-              <div className="md:w-1/2">
-                <Carousel
-                  showStatus={false}
-                  showThumbs={false}
-                  autoPlay={true}
-                  infiniteLoop={true}
-                >
-                  <div>
-                    <img
-                      alt="ecommerce"
-                      className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                      src="https://images.stockx.com/images/Nike-Air-Max-720-Black-Mesh-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1607647731&q=75"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      alt="ecommerce"
-                      className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY-JYu8ohg3acgRB1EhPlAsGPKjnjrtrbFrw&usqp=CAU"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      alt="ecommerce"
-                      className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz1xiLYcPkWhAO-CuHEh4RsqO85eUjyhgQhQ&usqp=CAU"
-                    />
-                  </div>
-                </Carousel>
-              </div>
-              <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 className="text-lg font-bold text-gray-500 tracking-widest">
-                  Nike Air Max 720
-                </h2>
-                {/* <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                  The Catcher in the Rye
-                </h1> */}
-                <p className="leading-relaxed">
-                  Reminiscent of Nike&apos;s Air Max Plus, the 720 Black Mesh
-                  uses a distinctive pattern on the upper that is a series of
-                  different waves or lines, giving it a rather unique and almost
-                  futuristic appearance. Rather than going for a large Swoosh
-                  logo that is typical of many Nike shoes, the Air Max 720 Black
-                  Mesh opts for a smaller, understated logo embedded into the
-                  midsole.
-                </p>
-                <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                  {/* <div className="flex">
-                    <span className="mr-3">Color</span>
-                    <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button className="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                  </div> */}
-                  {/* <div className="flex ml-6 items-center">
-                    <span className="mr-3">Size</span>
-                    <div className="relative">
-                      <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-                        <option>SM</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                      </select>
-                      <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                        <svg
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          className="w-4 h-4"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                      </span>
-                    </div>
-                  </div> */}
-                </div>
-                <div className="flex">
-                  <span className="title-font font-medium text-sm md:text-2xl text-gray-900">
-                    Paid $58.00 of $180.00
-                  </span>
-                  <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-                    Pay
-                  </button>
-                  <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                    <svg
-                      fill="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                    </svg>
-                  </button>
+      <div className="overflow-hidden bg-white md:h-[90vh] md:flex rounded-b-lg">
+        <div className="md:flex-1 h-96 md:h-auto">
+          <Carousel>
+            {slides.map((slide, i) => (
+              <img
+                src={slide}
+                key={i}
+                className="object-cover object-center bg-no-repeat"
+              />
+            ))}
+          </Carousel>
+        </div>
+
+        <div className="p-6 md:flex-1 md:flex md:flex-col justify-center">
+          <div>
+            <span className="text-xs font-medium text-blue-600 uppercase">
+              Product
+            </span>
+            <h2 className="text-xl font-bold mb-1 text-gray-500 tracking-widest border-b-2 border-gray-200">
+              Naserian's Luxury Farm House
+            </h2>
+            <p className="leading-relaxed">
+              Relax and unwind at this peaceful luxurious farm house with
+              breathtaking views of Namanga Hills and clear starry nights.A 4
+              wheel drive is most preferable for accessing the property.
+            </p>
+          </div>
+
+          <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+            <div className="flex items-center space-x-4">
+              <img
+                className="w-10 h-10 rounded-full"
+                src="https://media.istockphoto.com/id/1356420393/photo/3d-futuristic-woman-with-metaverse-vr-glasses.jpg?b=1&s=170667a&w=0&k=20&c=UTCXG8WzdGTrm4JOVan7Q8WbizJ-oSWW1GMvtvhNEpY="
+                alt=""
+              />
+              <div className="font-medium ">
+                <div>The3rdBrother</div>
+                <div className="text-sm text-gray-500 ">
+                  Owner of the Product
                 </div>
               </div>
             </div>
           </div>
-        </section>
+          <div className="flex">
+            <span className="title-font font-medium text-sm md:text-2xl text-gray-900">
+              Paid $58.00 of $180.00
+            </span>
+            <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+              Pay
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );
