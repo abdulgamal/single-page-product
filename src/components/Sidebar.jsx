@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import UserDropdown from "./UserDropdown";
 import NotificationDropdown from "./NotificationDropdown";
+import { AContext } from "../../context/AuthContext";
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
+  const { logOut } = useContext(AContext);
   const router = useRouter();
   return (
     <>
@@ -159,7 +161,10 @@ export default function Sidebar() {
             <hr className="my-4 md:min-w-full" />
 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-              <li className="items-center flex gap-2">
+              <li
+                className="items-center flex gap-2 cursor-pointer"
+                onClick={logOut}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -174,8 +179,7 @@ export default function Sidebar() {
                     d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
                   />
                 </svg>
-
-                <Link href="/">Logout</Link>
+                Logout
               </li>
             </ul>
           </div>

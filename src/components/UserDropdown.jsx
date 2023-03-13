@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { AContext } from "../../context/AuthContext";
 
 const UserDropdown = () => {
   const [toggle, setToggle] = React.useState(false);
+  const { user, logOut } = useContext(AContext);
   return (
     <>
       <button
@@ -28,9 +30,9 @@ const UserDropdown = () => {
         id="user-dropdown"
       >
         <div className="px-4 py-3">
-          <span className="block text-sm text-gray-900">The3rdBrother</span>
+          <span className="block text-sm text-gray-900">{user?.name}</span>
           <span className="block text-sm font-medium text-gray-500 truncate">
-            name@xample.com
+            {user?.email}
           </span>
         </div>
         <ul className="py-2" aria-labelledby="user-menu-button">
@@ -50,21 +52,11 @@ const UserDropdown = () => {
               Settings
             </Link>
           </li>
-          <li>
-            <Link
-              href="/sign-up"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Sign In
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Sign out
-            </Link>
+          <li
+            onClick={logOut}
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+          >
+            Sign out
           </li>
         </ul>
       </div>

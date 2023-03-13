@@ -1,13 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AContext } from "../../../context/AuthContext";
 
 function Index() {
   const router = useRouter();
   const [genUrl, setGenUrl] = useState("");
   const [copied, setCopied] = useState(false);
+  const { user } = useContext(AContext);
 
   const copyContent = async () => {
     try {
@@ -21,6 +22,12 @@ function Index() {
   const handleGenerate = async () => {
     setGenUrl("https://paysoko.com/");
   };
+
+  useEffect(() => {
+    if (!user) {
+      router.replace("/");
+    }
+  }, [user]);
 
   return (
     <>
